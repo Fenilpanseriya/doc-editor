@@ -1,5 +1,8 @@
 {
   "version": 2,
-  "builds": [{ "src": "backend/server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/backend/server.js" }]
+  "buildCommand":"cd frontend && npm install && npm run build",
+  "outputDirectory":"frontend/build",
+  "framework":"react",
+  "rewrites": [{ "src": "/backend/(.*)", "dest": "/backend/server.js" }],
+  
 }
